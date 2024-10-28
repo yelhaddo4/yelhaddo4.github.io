@@ -1,0 +1,24 @@
+let mic;
+function setup() {
+  createCanvas(1000, 1000);
+mic=new p5.AudioIn();
+mic.start();
+}
+function draw() {
+  let vol=mic.getLevel();
+  background(0,255,0);
+let h=map(vol,0,1,0,300)
+beginShape();
+vertex(300,100);
+vertex(600,100);
+vertex(600,150);
+vertex(450,150);
+vertex(450,250);
+vertex(600,250);
+vertex(600,400);
+vertex(300,400);  
+vertex(300,800);  
+vertex(0,800); 
+endShape(CLOSE);
+  
+}
